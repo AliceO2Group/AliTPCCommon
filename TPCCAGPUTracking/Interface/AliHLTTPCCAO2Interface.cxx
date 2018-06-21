@@ -16,8 +16,8 @@
 //                                                                          *
 //***************************************************************************
 
-#include "AliHLTTPCCAO2Interface.h"
 #include "AliHLTTPCCAStandaloneFramework.h"
+#include "AliHLTTPCCAO2Interface.h"
 #include "standaloneSettings.h"
 #include <iostream>
 #include <fstream>

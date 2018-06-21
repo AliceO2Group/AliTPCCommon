@@ -1,6 +1,5 @@
 #include "Rtypes.h"
 
-#include "AliHLTTPCCADef.h"
 #include "AliHLTTPCCASliceData.h"
 #include "AliHLTTPCCAStandaloneFramework.h"
 #include "AliHLTTPCCATrack.h"
@@ -8,6 +7,7 @@
 #include "AliHLTTPCCATrackerFramework.h"
 #include "AliHLTTPCGMMergedTrack.h"
 #include "AliHLTTPCGMPropagator.h"
+#include "AliHLTTPCCADef.h"
 #include "include.h"
 #include <algorithm>
 #include <cstdio>
