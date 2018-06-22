@@ -9,10 +9,10 @@
 #ifndef ALIHLTTPCCASTANDALONEFRAMEWORK_H
 #define ALIHLTTPCCASTANDALONEFRAMEWORK_H
 
+#include "AliHLTTPCCATrackerFramework.h"
 #include "AliHLTTPCCADef.h"
 #include "AliHLTTPCGMMerger.h"
 #include "AliHLTTPCCAClusterData.h"
-#include "AliHLTTPCCATrackerFramework.h"
 #include "AliHLTTPCClusterMCData.h"
 #include "AliHLTTPCCAMCInfo.h"
 #include <iostream>

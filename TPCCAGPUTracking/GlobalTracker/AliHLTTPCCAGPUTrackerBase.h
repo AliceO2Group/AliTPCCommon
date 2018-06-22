@@ -19,10 +19,10 @@
 
 #define HLTCA_GPU_DEFAULT_MAX_SLICE_COUNT 36
 
+#include "AliHLTLogging.h"
 #include "AliHLTTPCCAGPUTracker.h"
 #include "AliHLTTPCCADef.h"
 #include "AliHLTTPCCATracker.h"
-#include "AliHLTLogging.h"
 #include "AliHLTTPCCASliceOutput.h"
 
 #ifdef __CINT__

@@ -10,11 +10,11 @@
 #ifndef ALIHLTTPCCATRACKERFRAMEWORK_H
 #define ALIHLTTPCCATRACKERFRAMEWORK_H
 
+#include "AliHLTLogging.h"
 #include "AliHLTTPCCATracker.h"
 #include "AliHLTTPCCAGPUTracker.h"
 #include "AliHLTTPCCAParam.h"
 #include "AliHLTTPCCASliceOutput.h"
-#include "AliHLTLogging.h"
 #include <iostream>
 #include <string.h>
 
