@@ -48,13 +48,13 @@ HLTCA_MERGER_CXXFILES		= Merger/AliHLTTPCGMMerger.cxx \
 								Merger/AliHLTTPCGMSliceTrack.cxx \
 								Merger/AliHLTTPCGMPhysicalTrackModel.cxx \
 								Merger/AliHLTTPCGMPolynomialField.cxx \
-								Merger/AliHLTTPCGMPolynomialFieldCreator.cxx \
+								Merger/AliHLTTPCGMPolynomialFieldManager.cxx \
 								Merger/AliHLTTPCGMPropagator.cxx \
 								Merger/AliHLTTPCGMTrackParam.cxx
 
 HLTCA_TRD_CXXFILES			= TRDTracking/AliHLTTRDTrack.cxx \
 								TRDTracking/AliHLTTRDTracker.cxx \
-								TRDTracking/AliHLTTRDTrackletWord.cxx
+								TRDTracking/AliHLTTRDTrackletWord.cxx 
 
 HLTCA_STANDALONE_CXXFILES	= SliceTracker/AliHLTTPCCATrack.cxx \
 								SliceTracker/AliHLTTPCCATracklet.cxx \

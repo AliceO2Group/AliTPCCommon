@@ -58,6 +58,29 @@ void AliHLTTPCGMPolynomialField::Print() const
     if( i<fkM-1 ) cout<<", ";
     else cout<<" };"<<endl;
   }
+  
+  cout<<"TRD field: \n"<<endl;
+  
+  cout<<" TrdBx[fkTrdM] = { ";
+  for( int i=0; i<fkTrdM; i++){
+    cout<<fTrdBx[i];
+    if( i<fkTrdM-1 ) cout<<", ";
+    else cout<<" };"<<endl;
+  }
+
+  cout<<" TrdBy[fkTrdM] = { ";
+  for( int i=0; i<fkTrdM; i++){
+    cout<<fTrdBy[i];
+    if( i<fkTrdM-1 ) cout<<", ";
+    else cout<<" };"<<endl;
+  }
+
+  cout<<" TrdBz[fkTrdM] = { ";
+  for( int i=0; i<fkTrdM; i++){
+    cout<<fTrdBz[i];
+    if( i<fkTrdM-1 ) cout<<", ";
+    else cout<<" };"<<endl;
+  }
 }
 
 #else

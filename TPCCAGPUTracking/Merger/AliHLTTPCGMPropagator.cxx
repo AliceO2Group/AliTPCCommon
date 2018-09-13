@@ -57,7 +57,11 @@ GPUd() void  AliHLTTPCGMPropagator::GetBxByBz( float Alpha, float X, float Y, fl
   */
 #else
   float  bb[3];
-  fField->GetField( X*cs - Y*sn, X*sn + Y*cs, Z, bb);
+  if( fFieldRegion==TRD ){
+    fField->GetFieldTrd( X*cs - Y*sn, X*sn + Y*cs, Z, bb);
+  } else {
+    fField->GetField( X*cs - Y*sn, X*sn + Y*cs, Z, bb);
+  }
 #endif
 
   // rotate field to local coordinates
@@ -92,7 +96,11 @@ GPUd()  float  AliHLTTPCGMPropagator::GetBz( float Alpha, float X, float Y, floa
   AliTracker::GetBxByBz( r, bb);
   return bb[2] * kCLight;
 #else
-  return fField->GetFieldBz( X*cs - Y*sn, X*sn + Y*cs, Z);
+  if( fFieldRegion==TRD ){
+    fField->GetFieldTrdBz( X*cs - Y*sn, X*sn + Y*cs, Z);
+  } else {
+    return fField->GetFieldBz( X*cs - Y*sn, X*sn + Y*cs, Z);
+  }
 #endif
 }
 
