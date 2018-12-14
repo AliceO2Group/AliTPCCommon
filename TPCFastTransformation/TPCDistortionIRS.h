@@ -194,6 +194,7 @@ class TPCDistortionIRS :public FlatObject
   char * mSplineData; ///< pointer to the spline data in the flat buffer
   size_t mSliceDataSizeBytes;       ///< size of the data for one slice in the flat buffer
 
+  ClassDefNV(TPCDistortionIRS,1);
 };
 
 

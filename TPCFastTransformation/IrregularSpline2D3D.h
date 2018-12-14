@@ -195,6 +195,8 @@ class IrregularSpline2D3D :public FlatObject
   
   IrregularSpline1D mGridU; ///< grid for U axis
   IrregularSpline1D mGridV; ///< grid for V axis
+
+  ClassDefNV(IrregularSpline2D3D,1);
 };
 
 

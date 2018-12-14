@@ -24,6 +24,7 @@
 #include <cstring>
 #include <cassert>
 #include "AliTPCCommonDef.h"
+#include <Rtypes.h>
 
 namespace ali_tpc_common {
 namespace tpc_fast_transformation {
@@ -246,10 +247,12 @@ class FlatObject
     InProgress     = 0x2     ///< construction started: temporary  memory is reserved
    };
 
-  size_t mFlatBufferSize ;                      ///< Size of the flat buffer
+  size_t mFlatBufferSize = 0;                      ///< Size of the flat buffer
   std::unique_ptr<char[]> mFlatBufferContainer; ///< Optional container for the flat buffer
-  char* mFlatBufferPtr;                         ///< Pointer to the flat buffer
-  unsigned int mConstructionMask;               ///< mask for constructed object members, first two bytes are used by this class
+  char* mFlatBufferPtr = nullptr;                         ///< Pointer to the flat buffer
+  unsigned int mConstructionMask = ConstructionState::NotConstructed; ///< mask for constructed object members, first two bytes are used by this class
+
+  ClassDefNV(FlatObject,1);
 };
 
 

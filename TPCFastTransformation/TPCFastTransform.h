@@ -266,6 +266,8 @@ class TPCFastTransform :public FlatObject
 
   float mPrimVtxZ;      ///< Z of the primary vertex, needed for the Time-Of-Flight correction
   float mTPCalignmentZ; ///< Global Z shift of the TPC detector. It is applied at the end of the transformation.
+
+  ClassDefNV(TPCFastTransform,1);
 };
 
 
