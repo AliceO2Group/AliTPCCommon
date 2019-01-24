@@ -45,9 +45,10 @@
 
 #ifdef HAVE_O2HEADERS
 #include "ITStracking/TrackerTraitsCPU.h"
+#include "ITStracking/VertexerTraits.h"
 #include "TRDBase/TRDGeometryFlat.h"
 #else
-namespace o2 { namespace ITS { class TrackerTraits {}; class TrackerTraitsCPU : public TrackerTraits {}; }}
+namespace o2 { namespace ITS { class TrackerTraits {}; class TrackerTraitsCPU : public TrackerTraits {}; class VertexerTraits }}
 namespace o2 { namespace trd { struct TRDGeometryFlat {}; }}
 #endif
 using namespace o2::ITS;
@@ -71,6 +72,7 @@ AliGPUReconstruction::AliGPUReconstruction(const AliGPUCASettingsProcessing& cfg
 	if (mProcessingSettings.deviceType == CPU)
 	{
 		mITSTrackerTraits.reset(new o2::ITS::TrackerTraitsCPU);
+		mITSVertexerTraits.reset(new o2::ITS::VertexerTraits);
 	}
 	memset(mSliceOutput, 0, sizeof(mSliceOutput));
 }
@@ -80,6 +82,7 @@ AliGPUReconstruction::~AliGPUReconstruction()
 	//Reset these explicitly before the destruction of other members unloads the library
 	mTRDTracker.reset();
 	mITSTrackerTraits.reset();
+	mITSVertexerTraits.reset();
 }
 
 int AliGPUReconstruction::Init()

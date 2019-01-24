@@ -15,6 +15,7 @@
 #include "AliHLTTPCCASliceOutput.h"
 #include "AliHLTTPCCATracker.h"
 #include "AliHLTTPCGMMerger.h"
+
 class AliHLTTPCCASliceOutput;
 class AliHLTTPCCASliceOutTrack;
 class AliHLTTPCCASliceOutCluster;
@@ -31,7 +32,7 @@ struct AliHLTTRDTrackletLabels;
 class AliGPUCADisplay;
 class AliGPUCAQA;
 
-namespace o2 { namespace ITS { class TrackerTraits; }}
+namespace o2 { namespace ITS { class TrackerTraits; class VertexerTraits; }}
 namespace o2 { namespace trd { class TRDGeometryFlat; }}
 namespace o2 { namespace TPC { struct ClusterNativeAccessFullTPC; struct ClusterNative; }}
 namespace ali_tpc_common { namespace tpc_fast_transformation { class TPCFastTransform; }}
@@ -188,7 +189,8 @@ public:
 	//Getters for external usage of tracker classes
 	AliHLTTRDTracker* GetTRDTracker() {return mTRDTracker.get();}
 	o2::ITS::TrackerTraits* GetITSTrackerTraits() {return mITSTrackerTraits.get();}
-	AliHLTTPCCATracker* GetTPCSliceTrackers() {return mTPCSliceTrackersCPU;}
+    o2::ITS::VertexerTraits* GetITSVertexerTraits() {return mITSVertexerTraits.get();}
+ 	AliHLTTPCCATracker* GetTPCSliceTrackers() {return mTPCSliceTrackersCPU;}
 	const AliHLTTPCCATracker* GetTPCSliceTrackers() const {return mTPCSliceTrackersCPU;}
 	const AliHLTTPCGMMerger& GetTPCMerger() const {return mTPCMergerCPU;}
 	AliHLTTPCGMMerger& GetTPCMerger() {return mTPCMergerCPU;}
@@ -246,6 +248,7 @@ protected:
 	//Pointers to tracker classes
 	std::unique_ptr<AliHLTTRDTracker> mTRDTracker;
 	std::unique_ptr<o2::ITS::TrackerTraits> mITSTrackerTraits;
+	std::unique_ptr<o2::ITS::VertexerTraits> mITSVertexerTraits;
 	AliHLTTPCCATracker mTPCSliceTrackersCPU[NSLICES];
 	AliHLTTPCGMMerger mTPCMergerCPU;
 	AliHLTTPCCASliceOutput* mSliceOutput[NSLICES];
