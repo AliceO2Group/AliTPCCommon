@@ -91,7 +91,6 @@ set(CINTHDRS
 
 set(HDRS
     ${CINTHDRS}
-    ${CAGPUDIR}/GlobalTracker/AliGPUTPCGPUTrackerCommon.h
     AliGPUReconstructionCUDAInternals.h
   )
 
