@@ -54,10 +54,10 @@ AliGPUReconstruction::~AliGPUReconstruction()
 	}
 }
 
-void AliGPUReconstruction::GetITSTraits(std::unique_ptr<o2::ITS::TrackerTraits>& trackerTraits, std::unique_ptr<o2::ITS::VertexerTraits>& vertexerTraits)
+void AliGPUReconstruction::GetITSTraits(std::unique_ptr<o2::its::TrackerTraits>& trackerTraits, std::unique_ptr<o2::its::VertexerTraits>& vertexerTraits)
 {
-	trackerTraits.reset(new o2::ITS::TrackerTraitsCPU);
-	vertexerTraits.reset(new o2::ITS::VertexerTraits);
+	trackerTraits.reset(new o2::its::TrackerTraitsCPU);
+	vertexerTraits.reset(new o2::its::VertexerTraits);
 }
 
 int AliGPUReconstruction::Init()

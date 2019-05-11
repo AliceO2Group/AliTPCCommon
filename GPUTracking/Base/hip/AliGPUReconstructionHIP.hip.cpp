@@ -9,7 +9,7 @@ __constant__ uint4 gGPUConstantMemBuffer[(sizeof(AliGPUConstantMem) + sizeof(uin
 __constant__ char& gGPUConstantMemBufferChar = (char&) gGPUConstantMemBuffer;
 __constant__ AliGPUConstantMem& gGPUConstantMem = (AliGPUConstantMem&) gGPUConstantMemBufferChar;
 
-namespace o2 { namespace ITS { class TrackerTraitsHIP : public TrackerTraits {}; }}
+namespace o2 { namespace its { class TrackerTraitsHIP : public TrackerTraits {}; }}
 
 #include "AliGPUReconstructionIncludesDevice.h"
 

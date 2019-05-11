@@ -1,7 +1,7 @@
 #include "AliGPUChainITS.h"
 #include "AliGPUReconstructionIncludesITS.h"
 
-using namespace o2::ITS;
+using namespace o2::its;
 
 AliGPUChainITS::~AliGPUChainITS()
 {

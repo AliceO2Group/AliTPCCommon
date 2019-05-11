@@ -37,7 +37,7 @@ protected:
 	virtual void ReleaseEvent(deviceEvent* ev) override;
 	virtual void RecordMarker(deviceEvent* ev, int stream) override;
 	
-	virtual void GetITSTraits(std::unique_ptr<o2::ITS::TrackerTraits>& trackerTraits, std::unique_ptr<o2::ITS::VertexerTraits>& vertexerTraits) override;
+	virtual void GetITSTraits(std::unique_ptr<o2::its::TrackerTraits>& trackerTraits, std::unique_ptr<o2::its::VertexerTraits>& vertexerTraits) override;
 	
 	template <class T, int I = 0, typename... Args> int runKernelBackend(const krnlExec& x, const krnlRunRange& y, const krnlEvent& z, const Args&... args);
 

@@ -14,13 +14,13 @@ public:
 	virtual int Finalize() override;
 	virtual int RunStandalone() override;
 	
-	o2::ITS::TrackerTraits* GetITSTrackerTraits() {return mITSTrackerTraits.get();}
-	o2::ITS::VertexerTraits* GetITSVertexerTraits() {return mITSVertexerTraits.get();}
+	o2::its::TrackerTraits* GetITSTrackerTraits() {return mITSTrackerTraits.get();}
+	o2::its::VertexerTraits* GetITSVertexerTraits() {return mITSVertexerTraits.get();}
 	
 protected:
 	AliGPUChainITS(AliGPUReconstruction* rec);
-	std::unique_ptr<o2::ITS::TrackerTraits> mITSTrackerTraits;
-	std::unique_ptr<o2::ITS::VertexerTraits> mITSVertexerTraits;
+	std::unique_ptr<o2::its::TrackerTraits> mITSTrackerTraits;
+	std::unique_ptr<o2::its::VertexerTraits> mITSVertexerTraits;
 };
 
 #endif

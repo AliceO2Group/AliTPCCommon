@@ -18,7 +18,7 @@ texture<calink, cudaTextureType1D, cudaReadModeElementType> gAliTexRefu;
 #ifdef HAVE_O2HEADERS
 #include "ITStrackingCUDA/TrackerTraitsNV.h"
 #else
-namespace o2 { namespace ITS { class TrackerTraitsNV : public TrackerTraits {}; }}
+namespace o2 { namespace its { class TrackerTraitsNV : public TrackerTraits {}; }}
 #endif
 
 #include "AliGPUReconstructionIncludesDevice.h"
@@ -73,10 +73,10 @@ AliGPUReconstruction* AliGPUReconstruction_Create_CUDA(const AliGPUSettingsProce
 	return new AliGPUReconstructionCUDA(cfg);
 }
 
-void AliGPUReconstructionCUDABackend::GetITSTraits(std::unique_ptr<o2::ITS::TrackerTraits>& trackerTraits, std::unique_ptr<o2::ITS::VertexerTraits>& vertexerTraits)
+void AliGPUReconstructionCUDABackend::GetITSTraits(std::unique_ptr<o2::its::TrackerTraits>& trackerTraits, std::unique_ptr<o2::its::VertexerTraits>& vertexerTraits)
 {
-	trackerTraits.reset(new o2::ITS::TrackerTraitsNV);
-	vertexerTraits.reset(new o2::ITS::VertexerTraits);
+	trackerTraits.reset(new o2::its::TrackerTraitsNV);
+	vertexerTraits.reset(new o2::its::VertexerTraits);
 }
 
 int AliGPUReconstructionCUDABackend::InitDevice_Runtime()
